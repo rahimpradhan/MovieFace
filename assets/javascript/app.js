@@ -1,47 +1,4 @@
-/*function processImage() {
-    var subscriptionKey = "13hc77781f7e4b19b5fcdd72a8df7156";
 
-    var uriBase = "https://westcentralus.api.cognitive.microsoft.com/face/v1.0/detect";
-
-
-    var params = {
-        "returnFaceId": "true",
-        "returnFaceLandmarks": "false",
-        "returnFaceAttributes": "age,gender,headPose,smile,facialHair,glasses,emotion,hair,makeup,occlusion,accessories,blur,exposure,noise",
-    };
-
-
-    var sourceImageUrl = document.getElementById("inputImage").value;
-    document.querySelector("#sourceImage").src = sourceImageUrl;
-
-    $.ajax({
-        url: uriBase + "?" + $.param(params),
-
-        // Request headers.
-        beforeSend: function(xhrObj){
-            xhrObj.setRequestHeader("Content-Type","application/json");
-            xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", subscriptionKey);
-        },
-
-        type: "POST",
-
-
-        data: '{"url": ' + '"' + sourceImageUrl + '"}',
-    })
-
-        .done(function(data) {
-            // Show formatted JSON on webpage.
-            $("#responseTextArea").val(JSON.stringify(data, null, 2));
-        })
-
-        .fail(function(jqXHR, textStatus, errorThrown) {
-            // Display error message.
-            var errorString = (errorThrown === "") ? "Error. " : errorThrown + " (" + jqXHR.status + "): ";
-            errorString += (jqXHR.responseText === "") ? "" : (jQuery.parseJSON(jqXHR.responseText).message) ?
-                jQuery.parseJSON(jqXHR.responseText).message : jQuery.parseJSON(jqXHR.responseText).error.message;
-            alert(errorString);
-        });
-};*/
 
 movies = {
 
@@ -61,6 +18,23 @@ movies = {
 
     
 }
+
+var config = {
+    apiKey: "AIzaSyBagM0VtO7YxQTJ_n9EddMRB4GBk6DJoOc",
+    authDomain: "gtcbc72-bba8c.firebaseapp.com",
+    databaseURL: "https://gtcbc72-bba8c.firebaseio.com",
+    projectId: "gtcbc72-bba8c",
+    storageBucket: "gtcbc72-bba8c.appspot.com",
+    messagingSenderId: "371475465748"
+};
+
+
+
+firebase.initializeApp(config);
+var database = firebase.database();
+
+
+
 
 
 function displaycast(gender,mood){
@@ -172,88 +146,110 @@ var params = {
     "returnFaceLandmarks": "false",
     "returnFaceAttributes": "age,gender,headPose,smile,facialHair,glasses,emotion,hair,makeup,occlusion,accessories,blur,exposure,noise",
 };
-
+var provider = new firebase.auth.GoogleAuthProvider();
+var user;
+firebase.auth().signInWithPopup(provider).then(function(result) {
+    // This gives you a Google Access Token. You can use it to access the Google API.
+    var token = result.credential.accessToken;
+    // The signed-in user info.
+    user = result.user;
+    // ...
+}).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // The email of the user's account used.
+    var email = error.email;
+    // The firebase.auth.AuthCredential type that was used.
+    var credential = error.credential;
+    // ...
+});
 $("#scanbutton").on("click", function () {
-
-
-    console.log("test");
-    email = $("#email").val().trim();
-    name = $("#name").val().trim();
-
-
-
-    var age = "";
-    var happiness = "";
-    var anger = "";
-    var sadness = "";
-    var gender = "";
-    var sourceImageUrl = document.getElementById("url").value;
-
-    //var sourceImageUrl = "https://media.licdn.com/media/p/2/005/009/2f8/2ad00d5.jpg";
-
-    $.ajax({
-
-        url: uriBase + "?" + $.param(params),
-        beforeSend: function (xhrObj) {
-            xhrObj.setRequestHeader("Content-Type", "application/json");
-            xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", subscriptionKey);
-        },
-
-        type: "POST",
-        data: '{"url": ' + '"' + sourceImageUrl + '"}',
-
-    }).done(function (response) {
-
-        var responseVar = response[0];
-        console.log(response);
-        var age = responseVar['faceAttributes']['age'];
-        var ageDiv = $("<p>").text("age: " + age);
-        var happiness = responseVar['faceAttributes']['emotion']['happiness'];
-        var happinessDiv = $("<p>").text("happiness: " + happiness);
-        var anger = responseVar['faceAttributes']['emotion']['anger'];
-        var angerDiv = $("<p>").text("anger: " + anger);
-        var sadness = responseVar['faceAttributes']['emotion']['sadness'];
-        var sadDiv = $("<p>").text("sadness: " + sadness);
-        var gender = responseVar['faceAttributes']['gender'];
-        var genderDiv = $("<p>").text("gender: " + gender);
-
-        var sourceImageDiv = $("<img id='sourceImage'>").attr("src", sourceImageUrl);
-
-
-        var faceReultsDiv = $("<div id='faceResults'>");
-        $("body").append(faceReultsDiv);
-        $(faceReultsDiv).prepend(sourceImageDiv).append(ageDiv).append(happinessDiv).append(angerDiv).append(sadDiv).append(genderDiv)
-
-
-
-
-        console.log(age);
-        console.log(happiness);
-        console.log(anger);
-        console.log(sadness);
-        console.log(gender);
-
-        if(happiness>anger && happiness>sadness && gender === "male"){
-            console.log(happiness);
-            var mood ="happy";
-            $("#facescan").remove();
-            displayMovieInfo(gender,mood);
-            displaysimilars(gender,mood);
-            displaycast(gender,mood);
-
-
-        }
-
-    })
-        .fail(function (jqXHR, textStatus, errorThrown) {
-            // Display error message.
-            var errorString = (errorThrown === "") ? "Error. " : errorThrown + " (" + jqXHR.status + "): ";
-            errorString += (jqXHR.responseText === "") ? "" : (jQuery.parseJSON(jqXHR.responseText).message) ?
-                jQuery.parseJSON(jqXHR.responseText).message : jQuery.parseJSON(jqXHR.responseText).error.message;
-            alert(errorString);
-        });
-
     event.preventDefault();
+    if (user) {
+
+
+        console.log("test");
+        email = $("#email").val().trim();
+        name = $("#name").val().trim();
+
+        database.ref('/movieface').push({
+            name: name,
+            email: email,
+        })
+
+        var age = "";
+        var happiness = "";
+        var anger = "";
+        var sadness = "";
+        var gender = "";
+        var sourceImageUrl = document.getElementById("url").value;
+
+        //var sourceImageUrl = "https://media.licdn.com/media/p/2/005/009/2f8/2ad00d5.jpg";
+
+        $.ajax({
+
+            url: uriBase + "?" + $.param(params),
+            beforeSend: function (xhrObj) {
+                xhrObj.setRequestHeader("Content-Type", "application/json");
+                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", subscriptionKey);
+            },
+
+            type: "POST",
+            data: '{"url": ' + '"' + sourceImageUrl + '"}',
+
+        }).done(function (response) {
+
+            var responseVar = response[0];
+            console.log(response);
+            var age = responseVar['faceAttributes']['age'];
+            var ageDiv = $("<p>").text("age: " + age);
+            var happiness = responseVar['faceAttributes']['emotion']['happiness'];
+            var happinessDiv = $("<p>").text("happiness: " + happiness);
+            var anger = responseVar['faceAttributes']['emotion']['anger'];
+            var angerDiv = $("<p>").text("anger: " + anger);
+            var sadness = responseVar['faceAttributes']['emotion']['sadness'];
+            var sadDiv = $("<p>").text("sadness: " + sadness);
+            var gender = responseVar['faceAttributes']['gender'];
+            var genderDiv = $("<p>").text("gender: " + gender);
+
+            var sourceImageDiv = $("<img id='sourceImage'>").attr("src", sourceImageUrl);
+
+
+            var faceReultsDiv = $("<div id='faceResults'>");
+            $("body").append(faceReultsDiv);
+            $(faceReultsDiv).prepend(sourceImageDiv).append(ageDiv).append(happinessDiv).append(angerDiv).append(sadDiv).append(genderDiv)
+
+
+            console.log(age);
+            console.log(happiness);
+            console.log(anger);
+            console.log(sadness);
+            console.log(gender);
+
+            if (happiness > anger && happiness > sadness && gender === "male") {
+                console.log(happiness);
+                var mood = "happy";
+                $("#facescan").remove();
+                displayMovieInfo(gender, mood);
+                displaysimilars(gender, mood);
+                displaycast(gender, mood);
+
+
+            }
+
+        })
+            .fail(function (jqXHR, textStatus, errorThrown) {
+                // Display error message.
+                var errorString = (errorThrown === "") ? "Error. " : errorThrown + " (" + jqXHR.status + "): ";
+                errorString += (jqXHR.responseText === "") ? "" : (jQuery.parseJSON(jqXHR.responseText).message) ?
+                    jQuery.parseJSON(jqXHR.responseText).message : jQuery.parseJSON(jqXHR.responseText).error.message;
+                alert(errorString);
+            });
+
+       // event.preventDefault();
+    }
+
 })
 
 
