@@ -93,7 +93,7 @@ movies = {
 
     },
     "female_angry": {
-        name: "Charles Angels",
+        name: "Charlie's Angels",
         cast: {
             0: {
                 name: "Drew Barrymore",
