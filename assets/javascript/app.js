@@ -304,10 +304,7 @@ $("#scanbutton").on("click", function () {
         email = $("#email").val().trim();
         name = $("#name").val().trim();
 
-        database.ref('/movieface').push({
-            name: name,
-            email: email,
-        })
+
 
         var age = "";
         var happiness = "";
@@ -348,6 +345,14 @@ $("#scanbutton").on("click", function () {
             gender = responseVar['faceAttributes']['gender'];
             genderVar = gender;
             var genderDiv = $("<p>").text("gender: " + gender);
+            database.ref('/movieface').push({
+                name: name,
+                email: email,
+                anger: angerVar,
+                happiness: happinessVar,
+                sadness: sadnessVar,
+                img: sourceImageUrl,
+            })
 
             var resultsBtn =$("<a class='btn btn-primary btn-lg'  id='results' role='button' >Results</a>");
 
