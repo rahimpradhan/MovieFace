@@ -203,7 +203,7 @@ function displaysimilars(gender,mood){
     for(var i =0; i<3;i++){
         var similarMovie = movies[gender + "_" + mood]["similarMovies"][i];
         console.log(similarMovie);
-        var queryURL = "http://www.omdbapi.com/?t=" + similarMovie + "&y=&plot=short&apikey=40e9cece";
+        var queryURL = "https://www.omdbapi.com/?t=" + similarMovie + "&y=&plot=short&apikey=40e9cece";
         console.log(queryURL);
 
         $.ajax({
@@ -232,7 +232,7 @@ function displaysimilars(gender,mood){
 }
 function displayMovieInfo(gender,mood) {
     var movie = movies[gender + "_" + mood].name;
-    var queryURL = "http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=40e9cece";
+    var queryURL = "https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=40e9cece";
     console.log(queryURL);
 
     $.ajax({
