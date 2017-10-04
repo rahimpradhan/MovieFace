@@ -1,0 +1,68 @@
+ body {
+    font-family: 'Aclonica'; fone-size: 22px;
+    font-size: 14px;
+    line-height: 20px;
+    color: white;    
+	background-color:#080808;
+	opacity: 1;
+	background-blend-mode: .5
+
+
+}
+
+#jumbotron{
+	background-color:#080808;
+	padding-top: 100px;
+}
+
+#enterbutton{
+	background-color:black;
+	border-color: white;
+}
+
+#scanbutton{
+	background-color:black;
+	border-color: white;
+	margin-bottom: 20px;
+}
+
+#menu{
+	background: #080808;	
+}
+
+#home{
+	font-size: 200%;
+}
+
+#scan{
+	font-size: 200%;
+}
+
+#aboutus{
+	font-size: 200%;
+}
+
+::placeholder {
+    font-size: 1.5em;
+
+}
+.item{
+	margin-bottom: 10;
+}
+
+.img-circle {
+      width: 20%;
+      height: 20%;
+      text-align: center;
+      display: block;
+      margin: 0 auto;
+      
+}
+.display-3{
+font-family: 'Allura'; fone-size: 22px;
+}
+
+#footer{
+	text-align: center;
+	font-family: 'Allura'; fone-size: 32px
+}
