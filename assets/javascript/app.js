@@ -24,27 +24,26 @@ movies = {
         similarMovies: ["troy", "ben-hur", "spartacus"],
     },
     "male_angry": {
-        name: "matrix",
+        name: "the mask",
         cast: {
             0: {
-                name: "Keanu Reeves",
-                img: "https://images.moviepilot.com/image/upload/c_fill,h_470,q_auto:good,w_620/f0wakuyix5vca2yyh2oj.jpg",
+                name: "Jim Carrey",
+                img: "https://uproxx.files.wordpress.com/2014/07/mask.jpg?quality=100&w=650&h=365",
             },
             1: {
-                name: "Carrie-Anne Moss",
-                img: "https://cnet3.cbsistatic.com/img/naDA2uSjuqrJbeta3lqitdOAu70=/fit-in/970x0/2015/02/03/551669b4-c633-4091-9ee6-3d8acafc6518/trinitymatrix.jpg",
+                name: "Cameron Diaz",
+                img: "https://i.pinimg.com/736x/d7/32/8d/d7328d0b2636b02fb96d2139dfd2f1e0--cameron-diaz-the-mask-famous-stars.jpg",
             },
             2: {
-                name: "Laurence Fishburne",
-                img: "https://ewedit.files.wordpress.com/2015/01/2014-kia-matrix.jpg?w=612",
+                name: "Peter Greene",
+                img: "https://vignette4.wikia.nocookie.net/darkhorsemovies/images/9/90/Dorian_Tyrell.jpg/revision/latest?cb=20120625222027",
             },
             3: {
-                name: "Hugo Weaving",
-                img: "http://www.giantfreakinrobot.com/wp-content/uploads/2012/07/weaving.jpg",
+                name: "Amy Yasbek",
+                img: "http://articlebio.com/uploads/bio/2016/09/22/amy-yasbeck.jpg",
             },
         },
-            similarMovies: ["the matrix reloaded", "the matrix revolutions", "john wick"],
-
+        similarMovies: ["the matrix reloaded", "the matrix revolutions", "john wick"],
     },
     "male_sad": {
         name: "Dirty Grandpa",
