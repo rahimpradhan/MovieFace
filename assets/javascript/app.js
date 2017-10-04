@@ -58,8 +58,10 @@ movies = {
     }
 
 
+
     
 }
+
 
 function displaycast(gender,mood){
     var castsDiv = $("<div class='cast'>");
@@ -78,8 +80,10 @@ function displaycast(gender,mood){
 
         var image = $("<img>").attr("src", castImg);
         castsDiv.append(image);
+        var moviecastDiv = $("<div id='moviecast' >")
 
-        $("#movie-casts").prepend(castsDiv);
+        $("body").append(moviecastDiv);
+        $(moviecastDiv).prepend(castsDiv);
 
 
     }
@@ -110,7 +114,11 @@ function displaysimilars(gender,mood){
             var image = $("<img>").attr("src", imgURL);
             similarMoviesDiv.append(image);
 
-            $("#similar-movies").prepend(similarMoviesDiv);
+            var similarDiv = $("<div id='similarmovies' >")
+
+            $("body").append(similarDiv);
+
+            $(similarDiv).append(similarMoviesDiv);
 
         })
     }
@@ -145,7 +153,11 @@ function displayMovieInfo(gender,mood) {
         var image = $("<img>").attr("src", imgURL);
         movieDiv.append(image);
 
-        $("#movies-view").prepend(movieDiv);
+        var movieResultDiv = $("<div id='movieresult' >")
+
+        $("body").append(movieResultDiv);
+
+        $(movieResultDiv).prepend(movieDiv);
 
     });
 }
@@ -161,15 +173,23 @@ var params = {
     "returnFaceAttributes": "age,gender,headPose,smile,facialHair,glasses,emotion,hair,makeup,occlusion,accessories,blur,exposure,noise",
 };
 
-//$(".submit").on("click", function () {
+$("#scanbutton").on("click", function () {
+
+
+    console.log("test");
+    email = $("#email").val().trim();
+    name = $("#name").val().trim();
+
+
+
     var age = "";
     var happiness = "";
     var anger = "";
     var sadness = "";
     var gender = "";
-    //var sourceImageUrl = document.getElementById("inputImage").value;
+    var sourceImageUrl = document.getElementById("url").value;
     //document.querySelector("#sourceImage").src = sourceImageUrl;
-    var sourceImageUrl = "https://media.licdn.com/media/p/2/005/009/2f8/2ad00d5.jpg";
+    //var sourceImageUrl = "https://media.licdn.com/media/p/2/005/009/2f8/2ad00d5.jpg";
 
     $.ajax({
 
@@ -197,9 +217,11 @@ var params = {
         console.log(anger);
         console.log(sadness);
         console.log(gender);
+
         if(happiness>anger && happiness>sadness && gender === "male"){
             console.log(happiness);
             var mood ="happy";
+            $("#facescan").remove();
             displayMovieInfo(gender,mood);
             displaysimilars(gender,mood);
             displaycast(gender,mood);
@@ -216,9 +238,9 @@ var params = {
             alert(errorString);
         });
 
+    event.preventDefault();
+})
 
-
-//})
 
 
 /*1- male 20-30  happiness>anger
