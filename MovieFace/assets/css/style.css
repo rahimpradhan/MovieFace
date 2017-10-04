@@ -1,0 +1,43 @@
+ body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: white;    
+	background-color:black;
+}
+
+#jumbotron{
+	background-color:black;
+	padding-top: 100px;
+}
+
+#enterbutton{
+	background-color:black;
+	border-color: white;
+}
+
+#scanbutton{
+	background-color:black;
+	border-color: white;
+}
+
+#menu{
+	background-color: black;	
+}
+
+#home{
+	font-size: 200%;
+}
+
+#scan{
+	font-size: 200%;
+}
+
+#aboutus{
+	font-size: 200%;
+}
+
+::placeholder {
+    font-size: 1.5em;
+  
+}
