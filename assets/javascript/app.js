@@ -118,7 +118,7 @@ function displaysimilars(gender,mood){
 
             $("body").append(similarDiv);
 
-            $(similarDiv).append(similarMoviesDiv);
+            $(similarDiv).prepend(similarMoviesDiv);
 
         })
     }
@@ -188,7 +188,7 @@ $("#scanbutton").on("click", function () {
     var sadness = "";
     var gender = "";
     var sourceImageUrl = document.getElementById("url").value;
-    //document.querySelector("#sourceImage").src = sourceImageUrl;
+
     //var sourceImageUrl = "https://media.licdn.com/media/p/2/005/009/2f8/2ad00d5.jpg";
 
     $.ajax({
@@ -207,10 +207,25 @@ $("#scanbutton").on("click", function () {
         var responseVar = response[0];
         console.log(response);
         var age = responseVar['faceAttributes']['age'];
+        var ageDiv = $("<p>").text("age: " + age);
         var happiness = responseVar['faceAttributes']['emotion']['happiness'];
+        var happinessDiv = $("<p>").text("happiness: " + happiness);
         var anger = responseVar['faceAttributes']['emotion']['anger'];
+        var angerDiv = $("<p>").text("anger: " + anger);
         var sadness = responseVar['faceAttributes']['emotion']['sadness'];
+        var sadDiv = $("<p>").text("sadness: " + sadness);
         var gender = responseVar['faceAttributes']['gender'];
+        var genderDiv = $("<p>").text("gender: " + gender);
+
+        var sourceImageDiv = $("<img id='sourceImage'>").attr("src", sourceImageUrl);
+
+
+        var faceReultsDiv = $("<div id='faceResults'>");
+        $("body").append(faceReultsDiv);
+        $(faceReultsDiv).prepend(sourceImageDiv).append(ageDiv).append(happinessDiv).append(angerDiv).append(sadDiv).append(genderDiv)
+
+
+
 
         console.log(age);
         console.log(happiness);
