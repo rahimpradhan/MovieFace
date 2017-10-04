@@ -356,7 +356,7 @@ $("#scanbutton").on("click", function () {
 
 
             var faceReultsDiv = $("<div id='faceResults'>");
-            $("#facescan").remove();
+            $(".facescan").remove();
             $("body").append(faceReultsDiv);
             $("body").append(resultsBtn);
             $(faceReultsDiv).prepend(sourceImageDiv).append(ageDiv).append(happinessDiv).append(angerDiv).append(sadDiv).append(genderDiv);
