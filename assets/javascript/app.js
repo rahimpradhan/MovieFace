@@ -1,8 +1,9 @@
 
 
 movies = {
-    "male_happy": {
+    "male_sad": {
         name: "gladiator",
+        quote: "assets/media/gladiator.mp3",
         cast: {
             0: {
                 name: "Russell Crowe",
@@ -23,76 +24,80 @@ movies = {
         },
         similarMovies: ["troy", "ben-hur", "spartacus"],
     },
-    "male_angry": {
-        name: "the mask",
+    "male_happy": {
+        name: "borat",
+        quote: "assets/media/borat.mp3",
         cast: {
             0: {
-                name: "Jim Carrey",
-                img: "https://uproxx.files.wordpress.com/2014/07/mask.jpg?quality=100&w=650&h=365",
+                name: "Sacha Baron Cohen",
+                img: "http://images1.fanpop.com/images/photos/1600000/Borat-borat-1601822-402-500.jpg?quality=100&w=650&h=365",
             },
             1: {
-                name: "Cameron Diaz",
-                img: "https://i.pinimg.com/736x/d7/32/8d/d7328d0b2636b02fb96d2139dfd2f1e0--cameron-diaz-the-mask-famous-stars.jpg",
+                name: "Pamela Anderson",
+                img: "http://assets.nydailynews.com/polopoly_fs/1.1461812.1379631206!/img/httpImage/image.jpg_gen/derivatives/article_750/pamela-anderson.jpg",
             },
             2: {
-                name: "Peter Greene",
-                img: "https://vignette4.wikia.nocookie.net/darkhorsemovies/images/9/90/Dorian_Tyrell.jpg/revision/latest?cb=20120625222027",
+                name: "Ken Davitian",
+                img: "http://ianyanmag.com/wp-content/uploads/2012/09/image001.jpg",
             },
             3: {
-                name: "Amy Yasbek",
-                img: "http://articlebio.com/uploads/bio/2016/09/22/amy-yasbeck.jpg",
+                name: "Luenell",
+                img: "http://farm4.static.flickr.com/3659/3352127939_a394bc803d.jpg?v=0",
             },
         },
-        similarMovies: ["the matrix reloaded", "the matrix revolutions", "john wick"],
+        similarMovies: ["django unchained", "Wedding Crashers", "Step Brothers"],
     },
-    "male_sad": {
-        name: "Dirty Grandpa",
+    "male_angry": {
+        name: "A Few Good Men",
+        quote: "assets/media/afgm.wav",
         cast: {
             0: {
-                name: "Zac Effron",
-                img: "https://kinobody.com/wp-content/uploads/2017/05/zac-efron-baywatch.jpg",
+                name: "Tom Cruise",
+                img: "https://images-na.ssl-images-amazon.com/images/M/MV5BMTk1MjM3NTU5M15BMl5BanBnXkFtZTcwMTMyMjAyMg@@._V1_UY317_CR14,0,214,317_AL_.jpg",
             },
             1: {
-                name: "Robert De Niro",
-                img: "https://newsonia.com/media/upload/images/2014/01/03/DG2QGgK4C3GXdrgp3XSNTN69Sh4pJt6T_598x414.jpg"
+                name: "Jack Nicholson",
+                img: "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ3OTY0ODk0M15BMl5BanBnXkFtZTYwNzE4Njc4._V1_UY317_CR7,0,214,317_AL_.jpg"
             },
             2: {
-                name: "Julianne Hough",
-                img: "https://cdn.cliqueinc.com/posts/207500/exclusive-julianne-hough-reveals-her-hack-for-getting-rid-of-under-eye-bags-207500-1478204306-fb.1200x627uc.jpg",
+                name: "Demi Moore",
+                img: "https://images-na.ssl-images-amazon.com/images/M/MV5BMTc2Mjc1MDE4MV5BMl5BanBnXkFtZTcwNzAyNDczNA@@._V1_UY317_CR9,0,214,317_AL_.jpg",
             },
             3: {
-                name: "Zoey Deutch",
-                img: "http://cdn-img.instyle.com/sites/default/files/styles/320x384/public/1496158443/instyle-july-lew-zoe-deutch-3.jpg?itok=Wge-mVlD",
+                name: "Kevin Bacon",
+                img: "https://images-na.ssl-images-amazon.com/images/M/MV5BOTQxMTEyMjI0NV5BMl5BanBnXkFtZTgwODE4ODAzMjE@._V1_UX214_CR0,0,214,317_AL_.jpg",
             },
         },
-            similarMovies: ["neighbours", "neighbors 2", "bad grandpa"]
+        similarMovies: ["Platoon", "Saving Private Ryan", "Braveheart"]
 
     },
     "female_happy": {
-        name: "how to train your dragon",
+        name: "Bridget Jones's Diary",
+        quote: "assets/media/Diary.mp3",
         cast: {
             0: {
-                name: "Jay Baruchel",
-                img: "http://cdn.collider.com/wp-content/uploads/jay_baruchel_image3.jpg",
+                name: "Renée Zellweger",
+                img: "https://images-na.ssl-images-amazon.com/images/M/MV5BMTU5NDA4NTI0NF5BMl5BanBnXkFtZTgwNjY4MTIwMDI@._V1_SX1500_CR0,0,1500,999_AL_.jpg",
             },
             1: {
-                name: "America Ferrera",
-                img: "https://pmcdeadline2.files.wordpress.com/2014/01/ferrera__140117225717.png"
+                name: "Colin Firth",
+                img: "https://images-na.ssl-images-amazon.com/images/M/MV5BMTUxMDMwMTI4MF5BMl5BanBnXkFtZTcwMzE2MzQxMw@@._V1_UY317_CR6,0,214,317_AL_.jpg"
             },
             2: {
-                name: "Gerard Butler",
-                img: "https://i.pinimg.com/736x/c0/b9/91/c0b9918a59180895d9889e663d7ccbe1--black-suits-gerard-butler-.jpg",
+                name: "Hugh Grant",
+                img: "https://images-na.ssl-images-amazon.com/images/M/MV5BMTc4MTgxOTk2Ml5BMl5BanBnXkFtZTcwNzMwMjYwMw@@._V1_UY317_CR11,0,214,317_AL_.jpg",
             },
             3: {
-                name: "T.J Miller",
-                img: "http://cdn5.thr.com/sites/default/files/2011/02/108275370_a_p.jpg",
+                name: "Shirley Henderson",
+                img: "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQxNjAyNTY0M15BMl5BanBnXkFtZTYwNzMzNTMz._V1_UX214_CR0,0,214,317_AL_.jpg",
             },
         },
-            similarMovies: ["how to train your dragon 2", "wall-e", "the incredibles"]
+        similarMovies: ["Leap Year", "Notting Hill", "Love Actually"]
 
     },
     "female_angry": {
         name: "Charlie's Angels",
+        quote: "assets/media/angels.mp3",
         cast: {
             0: {
                 name: "Drew Barrymore",
@@ -111,15 +116,16 @@ movies = {
                 img: "https://summits.forgerock.com/app/uploads/2017/05/luke-wilson.jpg",
             },
         },
-            similarMovies: ["tomb raider", "salt", "knight and day"]
+        similarMovies: ["tomb raider", "salt", "knight and day"]
 
     },
     "female_sad": {
         name: "The Notebook",
+        quote: "assets/media/notebook.mp3",
         cast: {
             0: {
                 name: "Ryan Gosling",
-                img: "https://images-production.global.ssl.fastly.net/uploads/photos/file/108421/ryan-gosling-the-notebook.jpg",
+                img: "https://media1.popsugar-assets.com/files/thumbor/-X9NiiiMA42raerceMJ2TTLlS2Y/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2014/06/25/716/n/1922283/ae15aa03837e5ae5_ryan-gosling-noah-calhoun-the-notebook/i/Pensive-Brooding.jpg",
             },
             1: {
                 name: "Rachel McAdams",
@@ -134,12 +140,17 @@ movies = {
                 img: "https://vignette.wikia.nocookie.net/westworld/images/8/89/James-Marsden.jpg/revision/latest?cb=20141209213715",
             },
         },
-            similarMovies: ["Dear John", "The Vow", "La La Land"]
+        similarMovies: ["Dear John", "The Vow", "La La Land"]
 
     }
 }
 
-
+var audio = function (musictoplay) {
+    var audioElement = document.createElement("audio");
+    audioElement.loop = true;
+    audioElement.setAttribute("src", musictoplay );
+    audioElement.play();
+}
 
 
 
@@ -231,6 +242,8 @@ function displaysimilars(gender,mood){
 }
 function displayMovieInfo(gender,mood) {
     var movie = movies[gender + "_" + mood].name;
+    var movieQuote = movies[gender + "_" + mood].quote;
+    console.log(movieQuote);
     var queryURL = "https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=40e9cece";
     console.log(queryURL);
 
@@ -261,6 +274,7 @@ function displayMovieInfo(gender,mood) {
         //var movieResultDiv = $("<div id='movieresult' >")
 
         $("body").prepend(movieDiv);
+        audio(movieQuote);
 
         //$(movieResultDiv).prepend(movieDiv);
 
@@ -300,87 +314,87 @@ $("#scanbutton").on("click", function () {
     //if (user) {
 
 
-        console.log("test");
-        email = $("#email").val().trim();
-        name = $("#name").val().trim();
+    console.log("test");
+    email = $("#email").val().trim();
+    name = $("#name").val().trim();
 
 
 
-        var age = "";
-        var happiness = "";
-        var anger = "";
-        var sadness = "";
-        var gender = "";
-        var sourceImageUrl = document.getElementById("url").value;
+    var age = "";
+    var happiness = "";
+    var anger = "";
+    var sadness = "";
+    var gender = "";
+    var sourceImageUrl = document.getElementById("url").value;
 
-        //var sourceImageUrl = "https://media.licdn.com/media/p/2/005/009/2f8/2ad00d5.jpg";
+    //var sourceImageUrl = "https://media.licdn.com/media/p/2/005/009/2f8/2ad00d5.jpg";
 
-        $.ajax({
+    $.ajax({
 
-            url: uriBase + "?" + $.param(params),
-            beforeSend: function (xhrObj) {
-                xhrObj.setRequestHeader("Content-Type", "application/json");
-                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", subscriptionKey);
-            },
+        url: uriBase + "?" + $.param(params),
+        beforeSend: function (xhrObj) {
+            xhrObj.setRequestHeader("Content-Type", "application/json");
+            xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", subscriptionKey);
+        },
 
-            type: "POST",
-            data: '{"url": ' + '"' + sourceImageUrl + '"}',
+        type: "POST",
+        data: '{"url": ' + '"' + sourceImageUrl + '"}',
 
-        }).done(function (response) {
+    }).done(function (response) {
 
-            var responseVar = response[0];
-            console.log(response);
-            age = responseVar['faceAttributes']['age'];
-            ageVar = age;
-            var ageDiv = $("<p>").text("age: " + age);
-            happiness = responseVar['faceAttributes']['emotion']['happiness'];
-            happinessVar = happiness;
-            var happinessDiv = $("<p>").text("happiness: " + happiness);
-            anger = responseVar['faceAttributes']['emotion']['anger'];
-            angerVar = anger;
-            var angerDiv = $("<p>").text("anger: " + anger);
-            sadness = responseVar['faceAttributes']['emotion']['sadness'];
-            sadnessVar = sadness;
-            var sadDiv = $("<p>").text("sadness: " + sadness);
-            gender = responseVar['faceAttributes']['gender'];
-            genderVar = gender;
-            var genderDiv = $("<p>").text("gender: " + gender);
-            database.ref('/movieface').push({
-                name: name,
-                email: email,
-                anger: angerVar,
-                happiness: happinessVar,
-                sadness: sadnessVar,
-                img: sourceImageUrl,
-            })
-
-            var resultsBtn =$("<a class='btn btn-primary btn-lg'  id='results' role='button' >To The Movie</a>");
-
-            var sourceImageDiv = $("<img id='sourceImage'>").attr("src", sourceImageUrl);
-
-
-            var faceReultsDiv = $("<div id='faceResults well text-center'>");
-            $(".facescan").remove();
-            $("body").append(faceReultsDiv);
-            $("body").append(resultsBtn);
-            $(faceReultsDiv).prepend(sourceImageDiv).append(ageDiv).append(happinessDiv).append(angerDiv).append(sadDiv).append(genderDiv);
-
-
-            console.log(age);
-            console.log(happiness);
-            console.log(anger);
-            console.log(sadness);
-            console.log(gender);
-
-
+        var responseVar = response[0];
+        console.log(response);
+        age = responseVar['faceAttributes']['age'];
+        ageVar = age;
+        var ageDiv = $("<p>").text("age: " + age);
+        happiness = responseVar['faceAttributes']['emotion']['happiness'];
+        happinessVar = happiness;
+        var happinessDiv = $("<p>").text("happiness: " + happiness);
+        anger = responseVar['faceAttributes']['emotion']['anger'];
+        angerVar = anger;
+        var angerDiv = $("<p>").text("anger: " + anger);
+        sadness = responseVar['faceAttributes']['emotion']['sadness'];
+        sadnessVar = sadness;
+        var sadDiv = $("<p>").text("sadness: " + sadness);
+        gender = responseVar['faceAttributes']['gender'];
+        genderVar = gender;
+        var genderDiv = $("<p>").text("gender: " + gender);
+        database.ref('/movieface').push({
+            name: name,
+            email: email,
+            anger: angerVar,
+            happiness: happinessVar,
+            sadness: sadnessVar,
+            img: sourceImageUrl,
         })
-            .fail(function (jqXHR, textStatus, errorThrown) {
-                // Display error message.
-                var errorString = (errorThrown === "") ? "Error. " : errorThrown + " (" + jqXHR.status + "): ";
-                errorString += (jqXHR.responseText === "") ? "" : (jQuery.parseJSON(jqXHR.responseText).message) ?
-                    jQuery.parseJSON(jqXHR.responseText).message : jQuery.parseJSON(jqXHR.responseText).error.message;
-                alert(errorString);
-            });
+
+        var resultsBtn =$("<a class='btn btn-primary btn-lg'  id='results' role='button' >To The Movie</a>");
+
+        var sourceImageDiv = $("<img id='sourceImage'>").attr("src", sourceImageUrl);
+
+
+        var faceReultsDiv = $("<div id='faceResults'>");
+        $(".facescan").remove();
+        $("body").append(faceReultsDiv);
+        $("body").append(resultsBtn);
+        $(faceReultsDiv).prepend(sourceImageDiv).append(ageDiv).append(happinessDiv).append(angerDiv).append(sadDiv).append(genderDiv);
+
+
+        console.log(age);
+        console.log(happiness);
+        console.log(anger);
+        console.log(sadness);
+        console.log(gender);
+
+
+    })
+        .fail(function (jqXHR, textStatus, errorThrown) {
+            // Display error message.
+            var errorString = (errorThrown === "") ? "Error. " : errorThrown + " (" + jqXHR.status + "): ";
+            errorString += (jqXHR.responseText === "") ? "" : (jQuery.parseJSON(jqXHR.responseText).message) ?
+                jQuery.parseJSON(jqXHR.responseText).message : jQuery.parseJSON(jqXHR.responseText).error.message;
+            alert(errorString);
+        });
 
 
     //}
@@ -453,9 +467,9 @@ $("body").on("click","#results", function () {
 
 $(".special").on("click", function () {
 
-contactName = $("#contact #name").val().trim();
-contactEmail = $("#contact #email").val().trim();
-contactMessage = $("#contact #message").val().trim();
+    contactName = $("#contact #name").val().trim();
+    contactEmail = $("#contact #email").val().trim();
+    contactMessage = $("#contact #message").val().trim();
 
 
 
