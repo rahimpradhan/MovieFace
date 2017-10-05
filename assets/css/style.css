@@ -9,6 +9,11 @@
 #jumbotron{
 	background-color:black;
 	padding-top: 100px;
+
+}
+#facescan{
+	background-color:black;
+	padding-top: 100px;
 }
 
 #enterbutton{
@@ -22,7 +27,8 @@
 }
 
 #menu{
-	background-color: black;	
+	background-color: black;
+	border: hidden;	
 }
 
 #home{
@@ -39,5 +45,62 @@
 
 ::placeholder {
     font-size: 1.5em;
-  
+}
+#gif{
+	max-width: 100%;
+    max-height: 100%;
+    width: 200px;
+    height: 200px;
+}
+#sourceImage{
+	max-width: 100%;
+    max-height: 100%;
+	width: 300px;
+	height: 310px;
+	margin-left: 500px;
+	margin-right: 20px;	
+	border: 1px;
+	border-color: white;
+	box-shadow: 1px 1px 1px #aaa;
+	float: left;
+
+}
+#faceResults p {
+	margin: auto;
+    font-size: 30px;
+    
+
+}
+#results{
+    clear: both;
+    background-color:black;
+	border-color: white;
+	padding-top: 10px;
+	margin-top: 10px;
+	margin-left: 565px;
+	font-weight: bold;
+    }
+
+.movie {
+	text-align: center;
+	margin: auto;
+}
+.cast img {
+	float: left;
+	width: 200px;
+	height: 210px;
+	max-width: 100%;
+    max-height: 100%;
+    margin: 0 55px;
+}
+.similar_movie{
+	clear: both;
+
+}
+.well, img{
+  background-color: black;
+  height: auto;
+  overflow:auto;
+  text-align: center;
+
 }
