@@ -256,7 +256,7 @@ function displayMovieInfo(gender,mood) {
 
         var imgURL = response.Poster;
         var image = $("<img>").attr("src", imgURL);
-        movieDiv.append(image);
+        movieDiv.prepend(image);
 
         //var movieResultDiv = $("<div id='movieresult' >")
 
