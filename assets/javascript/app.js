@@ -450,3 +450,18 @@ $("body").on("click","#results", function () {
     }
 });
 
+$(".special").on("click", function () {
+
+contactName = $("#contact #name").val().trim();
+contactEmail = $("#contact #email").val().trim();
+contactMessage = $("#contact #message").val().trim();
+
+
+
+    database.ref('/contact').push({
+        name: contactName,
+        email: contactEmail,
+        message: contactMessage,
+    })
+
+})
