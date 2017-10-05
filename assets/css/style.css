@@ -65,9 +65,11 @@
 	float: left;
 
 }
-#faceResults, p {
+#faceResults p {
 	margin: auto;
-    font-size: 35px;
+    font-size: 30px;
+    
+
 }
 #results{
     clear: both;
@@ -76,24 +78,26 @@
 	padding-top: 10px;
 	margin-top: 10px;
 	margin-left: 565px;
-
+	font-weight: bold;
     }
 
 .movie {
 	text-align: center;
 	margin: auto;
 }
-.cast, img {
+.cast img {
+	float: left;
 	width: 200px;
 	height: 210px;
 	max-width: 100%;
     max-height: 100%;
+    margin: 0 55px;
 }
 .similar_movie{
 	clear: both;
 
 }
-.well {
+.well, img{
   background-color: black;
   height: auto;
   overflow:auto;

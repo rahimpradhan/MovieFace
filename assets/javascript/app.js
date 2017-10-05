@@ -178,11 +178,12 @@ function displaycast(gender,mood){
 
 
         var pOne = $("<p>").text(castName);
-        castsDiv.append(pOne);
+        
 
 
 
         var image = $("<img>").attr("src", castImg);
+        image.prepend(pOne);
         castsDiv.append(image);
         //var moviecastDiv = $("<div id='moviecast' >");
 
