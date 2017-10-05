@@ -189,11 +189,12 @@ function displaycast(gender,mood){
 
 
         var pOne = $("<p>").text(castName);
-        castsDiv.append(pOne);
+
 
 
 
         var image = $("<img>").attr("src", castImg);
+        image.prepend(pOne);
         castsDiv.append(image);
         //var moviecastDiv = $("<div id='moviecast' >");
 
@@ -230,11 +231,11 @@ function displaysimilars(gender,mood){
             var image = $("<img>").attr("src", imgURL);
             similarMoviesDiv.append(image);
 
-            //var similarDiv = $("<div id='similarmovies' >")
+
 
             $("body").append(similarMoviesDiv);
 
-            //$(similarDiv).prepend(similarMoviesDiv);
+
 
         })
     }
@@ -271,12 +272,12 @@ function displayMovieInfo(gender,mood) {
         var image = $("<img>").attr("src", imgURL);
         movieDiv.prepend(image);
 
-        //var movieResultDiv = $("<div id='movieresult' >")
+
 
         $("body").prepend(movieDiv);
         audio(movieQuote);
 
-        //$(movieResultDiv).prepend(movieDiv);
+
 
     });
 }
