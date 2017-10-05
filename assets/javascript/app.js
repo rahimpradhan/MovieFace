@@ -391,7 +391,7 @@ $("body").on("click","#results", function () {
     if (happinessVar > angerVar && happinessVar > sadnessVar && genderVar === "male") {
         var mood = "happy";
         $("body").empty();
-        var movieResultsDiv = $("<div id='movieresults'>");
+        //var movieResultsDiv = $("<div id='movieresults'>");
         displayMovieInfo(genderVar, mood);
         displaycast(genderVar, mood);
         displaysimilars(genderVar, mood);
@@ -401,7 +401,7 @@ $("body").on("click","#results", function () {
     else if (happinessVar < angerVar && angerVar > sadnessVar && genderVar === "male") {
         var mood = "angry";
         $("body").empty();
-        var movieResultsDiv = $("<div id='movieresults'>");
+        //var movieResultsDiv = $("<div id='movieresults'>");
 
         displaycast(genderVar, mood);
         displaysimilars(genderVar, mood);
@@ -412,7 +412,7 @@ $("body").on("click","#results", function () {
     else if (sadnessVar > angerVar && happinessVar < sadnessVar && genderVar === "male") {
         var mood = "sad";
         $("body").empty();
-        var movieResultsDiv = $("<div id='movieresults'>");
+        //var movieResultsDiv = $("<div id='movieresults'>");
         displayMovieInfo(genderVar, mood);
         displaycast(genderVar, mood);
         displaysimilars(genderVar, mood);
@@ -422,7 +422,7 @@ $("body").on("click","#results", function () {
     else if (happinessVar > angerVar && happinessVar > sadnessVar && genderVar === "female") {
         var mood = "happy";
         $("body").empty();
-        var movieResultsDiv = $("<div id='movieresults'>");
+        //var movieResultsDiv = $("<div id='movieresults'>");
         displayMovieInfo(genderVar, mood);
         displaycast(genderVar, mood);
         displaysimilars(genderVar, mood);
@@ -432,7 +432,7 @@ $("body").on("click","#results", function () {
     else if (happinessVar < angerVar && angerVar > sadnessVar && genderVar === "female") {
         var mood = "angry";
         $("body").empty();
-        var movieResultsDiv = $("<div id='movieresults'>");
+        //var movieResultsDiv = $("<div id='movieresults'>");
         displayMovieInfo(genderVar, mood);
         displaycast(genderVar, mood);
         displaysimilars(genderVar, mood);
@@ -442,7 +442,7 @@ $("body").on("click","#results", function () {
     else if (sadnessVar > angerVar && happinessVar < sadnessVar && genderVar === "female") {
         var mood = "sad";
         $("body").empty();
-        var movieResultsDiv = $("<div id='movieresults'>");
+        //var movieResultsDiv = $("<div id='movieresults'>");
         displayMovieInfo(genderVar, mood);
         displaycast(genderVar, mood);
         displaysimilars(genderVar, mood);
