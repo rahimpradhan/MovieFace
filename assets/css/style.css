@@ -55,20 +55,19 @@
 #sourceImage{
 	max-width: 100%;
     max-height: 100%;
-	width: 200px;
-	height: 210px;
+	width: 300px;
+	height: 310px;
 	margin-left: 500px;
 	margin-right: 20px;	
 	border: 1px;
 	border-color: white;
 	box-shadow: 1px 1px 1px #aaa;
 	float: left;
-}
-#faceResults p {
-	
-    font-size: 24px;
-    padding-left: 15px;
 
+}
+#faceResults, p {
+	margin: auto;
+    font-size: 35px;
 }
 #results{
     clear: both;
@@ -76,16 +75,28 @@
 	border-color: white;
 	padding-top: 10px;
 	margin-top: 10px;
-	margin-left: 525px;
+	margin-left: 565px;
 
     }
 
 .movie {
-	float: left;
-	margin-left: 500px;
+	text-align: center;
+	margin: auto;
 }
-.cast img {
-	clear: both;
+.cast, img {
 	width: 200px;
 	height: 210px;
+	max-width: 100%;
+    max-height: 100%;
+}
+.similar_movie{
+	clear: both;
+
+}
+.well {
+  background-color: black;
+  height: auto;
+  overflow:auto;
+  text-align: center;
+
 }

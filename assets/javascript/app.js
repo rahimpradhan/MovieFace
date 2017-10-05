@@ -168,7 +168,7 @@ var database = firebase.database();
 
 
 function displaycast(gender,mood){
-    var castsDiv = $("<div class='cast'>");
+    var castsDiv = $("<div class='cast well text-center'>");
     for(var key in movies[gender + "_" + mood]["cast"]){
         var keyVar = movies[gender + "_" + mood]["cast"][key]
         var castName = keyVar.name;
@@ -196,7 +196,7 @@ function displaycast(gender,mood){
 
 function displaysimilars(gender,mood){
 
-    var similarMoviesDiv = $("<div class='similar_movie'>");
+    var similarMoviesDiv = $("<div class='similar_movie well text-center'>");
 
 
     for(var i =0; i<3;i++){
@@ -239,7 +239,7 @@ function displayMovieInfo(gender,mood) {
         method: "GET"
     }).done(function (response) {
 
-        var movieDiv = $("<div class='movie'>");
+        var movieDiv = $("<div class='movie well text-center'>");
 
         var rating = response.Rated;
         var pOne = $("<p>").text("Rating: " + rating);
@@ -359,7 +359,7 @@ $("#scanbutton").on("click", function () {
             var sourceImageDiv = $("<img id='sourceImage'>").attr("src", sourceImageUrl);
 
 
-            var faceReultsDiv = $("<div id='faceResults'>");
+            var faceReultsDiv = $("<div id='faceResults well text-center'>");
             $(".facescan").remove();
             $("body").append(faceReultsDiv);
             $("body").append(resultsBtn);

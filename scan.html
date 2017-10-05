@@ -8,6 +8,7 @@
 	<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+
 </head>
 	
 <body>
@@ -36,19 +37,21 @@
 	  	<div class="ui massive form">
   <div class="two fields">
     <div class="field">
-      <label>Name</label>
+      <form data-toggle="validator" role="form">	
+      
       <input placeholder="Name" id="name" type="text">
     </div>
     <br>
     <div class="field">
-      <label>Email Address</label>
+      
       <input placeholder="email" id="email" type="text">
     </div>
     <div class="field">
-      <label>Image URL</label>
+     
       <input placeholder="Enter your image URL" id="url" type="text">
     </div>
   </div>
+</form>
   <center><a class="btn btn-primary btn-lg" href="scan.html" id="scanbutton" role="button">Scan</a>
 </div>
 	  
@@ -60,6 +63,6 @@
 	
 </div>
 	<script src="assets/javascript/app.js"></script>
-	
+			
 </body>
 </html>
