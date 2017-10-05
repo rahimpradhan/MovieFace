@@ -359,7 +359,7 @@ $("#scanbutton").on("click", function () {
             var sourceImageDiv = $("<img id='sourceImage'>").attr("src", sourceImageUrl);
 
 
-            var faceReultsDiv = $("<div id='faceResults'>");
+            var faceReultsDiv = $("<div id='faceResults well text-center'>");
             $(".facescan").remove();
             $("body").append(faceReultsDiv);
             $("body").append(resultsBtn);
