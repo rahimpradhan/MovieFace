@@ -221,7 +221,7 @@ function displaysimilars(gender,mood){
 
             //var similarDiv = $("<div id='similarmovies' >")
 
-            $("#movieresults").append(similarMoviesDiv);
+            $("body").append(similarMoviesDiv);
 
             //$(similarDiv).prepend(similarMoviesDiv);
 
@@ -260,7 +260,7 @@ function displayMovieInfo(gender,mood) {
 
         //var movieResultDiv = $("<div id='movieresult' >")
 
-        $("#movieresults").append(movieDiv);
+        $("body").prepend(movieDiv);
 
         //$(movieResultDiv).prepend(movieDiv);
 
@@ -354,7 +354,7 @@ $("#scanbutton").on("click", function () {
                 img: sourceImageUrl,
             })
 
-            var resultsBtn =$("<a class='btn btn-primary btn-lg'  id='results' role='button' >Results</a>");
+            var resultsBtn =$("<a class='btn btn-primary btn-lg'  id='results' role='button' >To The Movie</a>");
 
             var sourceImageDiv = $("<img id='sourceImage'>").attr("src", sourceImageUrl);
 
@@ -402,9 +402,10 @@ $("body").on("click","#results", function () {
         var mood = "angry";
         $("body").empty();
         var movieResultsDiv = $("<div id='movieresults'>");
-        displayMovieInfo(genderVar, mood);
+
         displaycast(genderVar, mood);
         displaysimilars(genderVar, mood);
+        displayMovieInfo(genderVar, mood);
         $("body").append(movieResultsDiv);
 
     }
